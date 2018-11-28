@@ -5,7 +5,7 @@ before_install:
   - echo "BEFORE INSTALL START"
   - gem install bundler
   - echo "BEFORE INSTALL END"
-     
+script: 'bundle exec rake spec'    
 before_install:
  - docker build -t kldocker01/docker-react -f Dockerfile.dev .
     
