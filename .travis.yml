@@ -1,9 +1,10 @@
 sudo: required
 services:
  - docker
-script:
-  - 'gem install bundler'
-  - 'rake spec'
+before_install:
+  - echo "BEFORE INSTALL START"
+  - gem install bundler
+  - echo "BEFORE INSTALL END"
      
 before_install:
  - docker build -t kldocker01/docker-react -f Dockerfile.dev .
